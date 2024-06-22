@@ -1,5 +1,4 @@
 import "./App.css";
-import RabbitList from "./composant/rabbitList";
 import logo from "./logo.png";
 import { useState, useEffect } from "react";
 
@@ -21,8 +20,21 @@ function App() {
         <h1>CuniWorld</h1>
       </header>
       <div className="corps">
-        <div className="rabbit">
-          <RabbitList lapins={lapins} />
+        <div className="lapins">
+          <h2>Liste des lapins</h2>
+          {lapins.map((lapin) => (
+            <div className="lapins-card">
+              <img src={logo} className="App-logo" alt="logo" />
+              <h2>{lapin.name}</h2>
+              <p>
+                {lapin.breed} , {lapin.color} née le {lapin.birth_date}
+              </p>
+            </div>
+          ))}
+        </div>
+        <div className="lapin-detail">
+          <p>Cliquez sur un lapin de la liste pour en savoir plus sur lui</p>
+          {selectedRabbit && <RabbitDetail rabbit={selectedRabbit} />}
         </div>
       </div>
     </div>
