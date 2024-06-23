@@ -15,7 +15,7 @@ const RabbitCard = ({ rabbit, onClick }) => {
     >
       <img src={logo} className="App-logo" alt="logo" />
       <h3>{rabbit.name}</h3>
-      <p>{rabbit.breed} , {rabbit.color} née le {rabbit.birth_date}</p>
+      {/* <p>{rabbit.breed} , {rabbit.color} née le {rabbit.birth_date}</p> */}
     </div>
   );
 };

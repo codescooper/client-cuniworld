@@ -1,0 +1,21 @@
+.task-list-container{
+    width: 100%;
+}
+.task-list{
+    list-style-type: none;
+    background-color: antiquewhite;
+    padding: 10px;
+    margin: 10px;
+}
+.task-item{
+    padding: 10px;
+    margin: 10px;
+    background-color: lightgrey;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.task-validation button{
+    border-radius: 25%;
+    height: 100px;
+}
