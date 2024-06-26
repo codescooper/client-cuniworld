@@ -18,7 +18,6 @@ const AddRabbitForm = () => {
       setError("Tous les champs sont obligatoires");
       return;
     }
-    console.log(rabbit);
     try {
       await axios.post("http://localhost:5000/api/rabbits", rabbit);
     } catch (err) {
